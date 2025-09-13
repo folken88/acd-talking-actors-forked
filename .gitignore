@@ -1,0 +1,22 @@
+# FoundryVTT specific files
+packs/*/LOCK
+packs/*/CURRENT
+*.db
+*.log
+
+# Node modules (if any)
+node_modules/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp

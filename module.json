@@ -1,0 +1,66 @@
+{
+  "id": "acd-talking-actors-forked",
+  "name": "acd-talking-actors-forked",
+  "title": "Talking Actors (Forked)",
+  "version": "0.9.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "12"
+  },
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "language/en.json"
+  },
+  {
+    "lang": "de",
+    "name": "Deutsch",
+    "path": "language/de.json"
+  }
+  ],
+  "styles": [
+    "styles/ta-styles.css",
+    "styles/context-menu.min.css"
+  ],
+  "esmodules": [
+    "scripts/init.js"
+  ],
+  "scripts": [
+    "scripts/context-menu.min.js"
+  ],
+  "packFolders": [
+    {
+      "name": "TA Macros",
+      "packs": [
+        "talking-actors"
+      ]
+    }
+  ],
+  "packs": [
+    {
+      "name": "talking-actors",
+      "label": "Talking Actors Macros",
+      "path": "packs/talking-actors.db",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER"
+      }
+    }
+  ],
+  "socket": true,
+  "description": "Selectable and adjustable voices for FoundryVTT actors through Elevenlabs integration.\\nSupports Eleven v3 (alpha) with multilingual output, dialogue mode, and enhanced voice control.\\nSimply configure the voice for an actor and use the /talk chat command in the chat to hear him talk.\\nAn Elevenlabs subscription is required for the API Key.",
+  "authors": [
+    {
+      "name": "Acd-Jake",
+      "discord": "Acd-Jake",
+      "flags": {
+        "github": "acd-jake"
+      }
+    }
+  ],
+  "url": "https://github.com/folkengames/acd-talking-actors-forked",
+  "download": "https://github.com/folkengames/acd-talking-actors-forked/releases/download/0.8.1/module.zip",
+  "manifest": "https://github.com/folkengames/acd-talking-actors-forked/releases/latest/download/module.json",
+  "bugs": "https://github.com/folkengames/acd-talking-actors-forked/issues"
+}

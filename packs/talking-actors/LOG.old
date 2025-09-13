@@ -1,0 +1,7 @@
+2025/09/12-13:33:11.550 140c Recovering log #346
+2025/09/12-13:33:11.553 140c Delete type=0 #346
+2025/09/12-13:33:11.554 140c Delete type=3 #344
+2025/09/12-22:44:46.126 52fc Level-0 table #351: started
+2025/09/12-22:44:46.126 52fc Level-0 table #351: 0 bytes OK
+2025/09/12-22:44:46.127 52fc Delete type=0 #349
+2025/09/12-22:44:46.130 52fc Manual compaction at level-0 from '!macros!WmeIOdBpXF7Bd8lx' @ 72057594037927935 : 1 .. '!macros!WmeIOdBpXF7Bd8lx' @ 0 : 0; will stop at (end)

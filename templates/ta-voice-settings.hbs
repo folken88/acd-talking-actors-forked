@@ -1,0 +1,168 @@
+<div class="ta-voice-settings flexcol" style="height: 100%;">
+    <div class="dialog-content" style="height: calc(100% - 30px);">
+        <form style="height: 100%;">
+            <div class="flexrow" style="height: 100%;">
+                <div style="padding-right:10px;">
+
+                    <!-- Actor List -->
+                    <div class="form-group sheet">
+                        <ol class="items-list inventory-list">
+                            <li class="items-header flexrow">
+                                <h3 class="item-name noborder flexrow">{{localize 'acd.ta.VoiceSettings.Actors'}}</h3>
+
+                                <div class="item-controls flexrow">
+                                    <a class="item-control" title="{{localize 'acd.ta.VoiceSettings.AddActor'}}"
+                                        data-type="actor">
+                                        <i class="fas fa-plus"></i>{{localize 'acd.ta.VoiceSettings.Add'}}
+                                    </a>
+                                    <a class="item-control" title="{{localize 'acd.ta.VoiceSettings.ClearAll'}}"
+                                        data-type="clear">
+                                        <i class="fas fa-trash-alt"></i>{{localize 'acd.ta.VoiceSettings.Clear'}}
+                                    </a>
+                                </div>
+                            </li>
+
+                            <ol class="item-list" style="min-height:150px;">
+                                {{#each actors}}
+                                <li class="item flexrow " data-item-id="{{this.id}}" draggable="true">
+                                    <div class="item-name flexrow rollable">
+                                        <div class="item-image"
+                                            style="background-image: url('{{this.prototypeToken.texture.src}}')">
+                                            <video width="30" height="30">
+                                                <source src="{{this.prototypeToken.texture.src}}" />
+                                            </video>
+                                        </div>
+                                        <h4>
+                                            {{this.name}}
+                                        </h4>
+                                    </div>
+
+                                    <div class="item-controls flexrow">
+                                        <a class="item-control item-delete"
+                                            title="{{localize 'acd.ta.VoiceSettings.DeleteActor'}}"><i
+                                                class="fas fa-trash"></i></a>
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ol>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Voice Settings -->
+                <div class="voice-settings"
+                    style="height: 100%; overflow-y: auto; overflow-x: hidden;line-height: 17px;">
+
+                    <!-- Voice Selection -->
+                    <div class="settings-header">{{localize 'acd.ta.VoiceSettings.VoiceSelection'}}</div>
+                    <div class="form-group">
+                        <label>{{localize 'acd.ta.VoiceSettings.VoiceLabel'}}</label>
+                        <select id="voice-id">
+                            {{#each voices}}
+                            <option value="{{this.voice_id}}" {{#ifEquals this.voice_id ../voiceId}}selected="selected"
+                                {{/ifEquals}}>{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                        <a class="item-control" id="play-sample" title="{{localize 'acd.ta.VoiceSettings.PlaySample'}}">
+                            <i class="fas fa-play" style="margin-left: 10px"></i></a>
+                    </div>
+
+                    <!-- Model Selection -->
+                    <div class="form-group">
+                        <label>{{localize 'acd.ta.VoiceSettings.ModelLabel'}}</label>
+                        <select id="model-id">
+                            <option value="eleven_turbo_v2" {{#ifEquals modelId "eleven_turbo_v2"}}selected="selected"{{/ifEquals}}>Eleven Turbo v2 (Fast)</option>
+                            <option value="eleven_flash_v2" {{#ifEquals modelId "eleven_flash_v2"}}selected="selected"{{/ifEquals}}>Eleven Flash v2 (Fastest)</option>
+                            <option value="eleven_v3" {{#ifEquals modelId "eleven_v3"}}selected="selected"{{/ifEquals}}>Eleven v3 (Alpha - Multilingual)</option>
+                            <option value="eleven_multilingual_v2" {{#ifEquals modelId "eleven_multilingual_v2"}}selected="selected"{{/ifEquals}}>Eleven Multilingual v2 (Legacy)</option>
+                        </select>
+                    </div>
+
+                    <!-- Language Selection -->
+                    <div class="form-group">
+                        <label>{{localize 'acd.ta.VoiceSettings.LanguageLabel'}}</label>
+                        <select id="language-code">
+                            <option value="auto" {{#ifEquals languageCode "auto"}}selected="selected"{{/ifEquals}}>Auto-detect</option>
+                            <option value="en" {{#ifEquals languageCode "en"}}selected="selected"{{/ifEquals}}>English</option>
+                            <option value="es" {{#ifEquals languageCode "es"}}selected="selected"{{/ifEquals}}>Spanish</option>
+                            <option value="fr" {{#ifEquals languageCode "fr"}}selected="selected"{{/ifEquals}}>French</option>
+                            <option value="de" {{#ifEquals languageCode "de"}}selected="selected"{{/ifEquals}}>German</option>
+                            <option value="it" {{#ifEquals languageCode "it"}}selected="selected"{{/ifEquals}}>Italian</option>
+                            <option value="pt" {{#ifEquals languageCode "pt"}}selected="selected"{{/ifEquals}}>Portuguese</option>
+                            <option value="ru" {{#ifEquals languageCode "ru"}}selected="selected"{{/ifEquals}}>Russian</option>
+                            <option value="ja" {{#ifEquals languageCode "ja"}}selected="selected"{{/ifEquals}}>Japanese</option>
+                            <option value="ko" {{#ifEquals languageCode "ko"}}selected="selected"{{/ifEquals}}>Korean</option>
+                            <option value="zh" {{#ifEquals languageCode "zh"}}selected="selected"{{/ifEquals}}>Chinese</option>
+                            <option value="ar" {{#ifEquals languageCode "ar"}}selected="selected"{{/ifEquals}}>Arabic</option>
+                            <option value="hi" {{#ifEquals languageCode "hi"}}selected="selected"{{/ifEquals}}>Hindi</option>
+                            <option value="nl" {{#ifEquals languageCode "nl"}}selected="selected"{{/ifEquals}}>Dutch</option>
+                            <option value="sv" {{#ifEquals languageCode "sv"}}selected="selected"{{/ifEquals}}>Swedish</option>
+                            <option value="no" {{#ifEquals languageCode "no"}}selected="selected"{{/ifEquals}}>Norwegian</option>
+                            <option value="da" {{#ifEquals languageCode "da"}}selected="selected"{{/ifEquals}}>Danish</option>
+                            <option value="fi" {{#ifEquals languageCode "fi"}}selected="selected"{{/ifEquals}}>Finnish</option>
+                            <option value="pl" {{#ifEquals languageCode "pl"}}selected="selected"{{/ifEquals}}>Polish</option>
+                            <option value="tr" {{#ifEquals languageCode "tr"}}selected="selected"{{/ifEquals}}>Turkish</option>
+                            <option value="he" {{#ifEquals languageCode "he"}}selected="selected"{{/ifEquals}}>Hebrew</option>
+                            <option value="th" {{#ifEquals languageCode "th"}}selected="selected"{{/ifEquals}}>Thai</option>
+                            <option value="vi" {{#ifEquals languageCode "vi"}}selected="selected"{{/ifEquals}}>Vietnamese</option>
+                        </select>
+                    </div>
+
+                    <!-- Dialogue Mode (Eleven v3 only) -->
+                    <div class="form-group" id="dialogue-mode-group" style="display: none;">
+                        <label>
+                            <input type="checkbox" id="dialogue-mode" {{#if dialogueMode}}checked{{/if}}/>
+                            {{localize 'acd.ta.VoiceSettings.DialogueMode'}}
+                        </label>
+                        <p class="notes">{{localize 'acd.ta.VoiceSettings.DialogueModeHint'}}</p>
+                    </div>
+
+                    <div class="settings-header">{{localize 'acd.ta.VoiceSettings.Settings'}}</div>
+                    
+                    <!-- Similarity Boost -->
+                    <div class="form-group">
+                        <label>{{localize 'acd.ta.VoiceSettings.SimilarityBoost'}}</label>
+                        <input type="range" id="similarity_boost" min="0" max="1" step="0.05" value="{{voiceSettings.similarity_boost}}"/>
+                        <label id="similarity_boost_label">{{currentSimilarityBoost}} %</label>
+                    </div>
+
+                    <!-- Stability -->
+                    <div class="form-group">
+                        <label>{{localize 'acd.ta.VoiceSettings.Stability'}}</label>
+                        <input type="range" id="stability" min="0" max="1" step="0.05" value="{{voiceSettings.stability}}"/>
+                        <label id="stability_label">{{currentStability}} %</label>
+                    </div>
+
+                    <!-- Style -->
+                    <div class="form-group">
+                        <label>{{localize 'acd.ta.VoiceSettings.Style'}}</label>
+                        <input type="range" id="style" min="0" max="1" step="0.05" value="{{voiceSettings.style}}"/>
+                        <label id="style_label">{{currentStyle}} %</label>
+                    </div>
+
+                    <!-- Speed removed - not supported by ElevenLabs API -->
+
+                    <!-- Speaker Boost -->
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="use_speaker_boost" {{#if voiceSettings.use_speaker_boost}}checked{{/if}}/>
+                            {{localize 'acd.ta.VoiceSettings.UseSpeakerBoost'}}
+                        </label>
+                        <p class="notes">{{localize 'acd.ta.VoiceSettings.UseSpeakerBoostHint'}}</p>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="dialog-buttons flexrow">
+        <button class="dialog-button accept-data" data-button="accept-data"
+            title="{{localize 'acd.ta.VoiceSettings.AcceptData'}}"><i class="fas fa-save" style="margin-right: 10px">{{localize
+                'acd.ta.VoiceSettings.AcceptData'}}</i></button>
+    
+       <button class="dialog-button close" data-button="close"
+            title="{{localize 'acd.ta.VoiceSettings.Close'}}"><i class="fas fa-close" style="margin-right: 10px">{{localize
+                'acd.ta.VoiceSettings.Close'}}</i></button>
+    </div>
+</div>
