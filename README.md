@@ -1,4 +1,7 @@
-# acd-talking-actors (Updated for ElevenLabs API 2025)
+# acd-talking-actors-forked (Updated for ElevenLabs API 2025)
+
+A modernized fork of the original acd-talking-actors module, updated to support the latest ElevenLabs API capabilities as of September 2025.
+
 Selectable and adjustable voices for FoundryVTT actors through Elevenlabs integration. You can configure voices, finetune them and assign them to your linked actors in FoundryVTT using the voice settings dialog in the scene controls bar.
 
 ## New Features (v0.9.0)
@@ -13,12 +16,48 @@ Using the chat command /talk with an actor selected will let the character speak
 
 An Elevenlabs subscription is required for the module to work. https://beta.elevenlabs.io/
 
-* This module is a spritual successor to the module "Elevenlabs for Foundry" by Vexthecollector (https://github.com/Vexthecollector/elevenlabs-for-foundry/tree/main).
-* This module optionally uses the [Yendors Scene Actors](https://foundryvtt.com/packages/yendors-scene-actors) module if this is installed. If an actor is set to focus in the Scene Actors module, it is used for the voice output and does not need to have a token in the active scene. (From version 0.4)
-* This module optionally uses the [Conversation Hud](https://foundryvtt.com/packages/conversation-hud) module if this is installed. If the "Speak As" option is set in the Conversation Hud module, the active conversation participant is used for the voice output and does not need to have a token in the active scene. (From version 0.5)
-* Supports read-aloud texts in FoundryVTT journals with an insertable macro (with free voice selection by voice id, actor name or actor id). (From version 0.6)
-* Offers the option of playing spoken text repeatedly by clicking a button on the chat messages. The replayed text will be loaded from the history of generated samples in Elevenlabs and thus does not count against the word limit. (From version 0.6)
-* Supports entering of text to be read aloud with a button in the token hud (from version 0.8)
-* Offers the option to suppres posting the spoken text to the chat (from version 0.8)
-* Provides an api to be used by third party modules (from version 0.8)
-* Supports generation of sound effects based on textual description from the playlist sidebar (from version 0.8)
+## Installation
+
+1. Install the module through FoundryVTT's module browser
+2. Configure your ElevenLabs API key in module settings
+3. Select voices for your actors using the voice settings dialog
+4. Use `/talk` in chat to make actors speak
+
+## Features
+
+* **Eleven v3 (Alpha) Support**: Full integration with the latest ElevenLabs model featuring multilingual output
+* **Language Selection**: Choose from 70+ supported languages for improved output quality
+* **Dialogue Mode**: Multi-speaker conversation support for Eleven v3
+* **Enhanced Voice Settings**: Fine-tune stability, similarity boost, style, and speaker boost
+* **Sound Effects**: Generate and loop sound effects based on text descriptions
+* **Model Selection**: Choose between Eleven Turbo v2, Flash v2, v3, or legacy Multilingual v2
+* **Read-aloud Support**: Insert macros in journals for text-to-speech
+* **Replay Functionality**: Replay generated speech without using additional API credits
+* **Token HUD Integration**: Quick text input directly from token interface
+* **Third-party API**: Integration support for other modules
+* **Optional Integrations**: Works with Yendors Scene Actors and Conversation Hud modules
+
+## Credits
+
+### Original Author
+- **Acd-Jake** - Original creator of the acd-talking-actors module
+  - GitHub: [acd-jake](https://github.com/acd-jake)
+  - Discord: Acd-Jake
+
+### Fork Maintainer  
+- **folken88** - Maintainer of this updated fork
+  - GitHub: [folken88](https://github.com/folken88)
+  - Repository: [acd-talking-actors-forked](https://github.com/folken88/acd-talking-actors-forked)
+
+### Acknowledgments
+- **ElevenLabs** - For providing the excellent text-to-speech API
+- **FoundryVTT Community** - For feedback and testing
+- **Vexthecollector** - Original inspiration from "Elevenlabs for Foundry" module
+
+## License
+
+This project is licensed under the same terms as the original acd-talking-actors module.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for detailed version history and changes.

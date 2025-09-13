@@ -57,10 +57,16 @@
       "flags": {
         "github": "acd-jake"
       }
+    },
+    {
+      "name": "folken88",
+      "flags": {
+        "github": "folken88"
+      }
     }
   ],
-  "url": "https://github.com/folkengames/acd-talking-actors-forked",
-  "download": "https://github.com/folkengames/acd-talking-actors-forked/releases/download/0.8.1/module.zip",
-  "manifest": "https://github.com/folkengames/acd-talking-actors-forked/releases/latest/download/module.json",
-  "bugs": "https://github.com/folkengames/acd-talking-actors-forked/issues"
+  "url": "https://github.com/folken88/acd-talking-actors-forked",
+  "download": "https://github.com/folken88/acd-talking-actors-forked/releases/download/0.9.0/module.zip",
+  "manifest": "https://github.com/folken88/acd-talking-actors-forked/releases/latest/download/module.json",
+  "bugs": "https://github.com/folken88/acd-talking-actors-forked/issues"
 }
