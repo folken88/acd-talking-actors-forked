@@ -59,8 +59,9 @@ All notable changes to this project will be documented in this file.
   - Discord: Acd-Jake
 
 ### Fork Maintainer  
-- **folken88** - Maintainer of this updated fork
+- **Tobias Merriman** (Folken Games) - Maintainer of this updated fork
   - GitHub: [folken88](https://github.com/folken88)
+  - Company: [Folken Games](https://github.com/folken88)
   - Repository: [acd-talking-actors-forked](https://github.com/folken88/acd-talking-actors-forked)
 
 ### Acknowledgments

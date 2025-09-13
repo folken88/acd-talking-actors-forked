@@ -45,8 +45,9 @@ An Elevenlabs subscription is required for the module to work. https://beta.elev
   - Discord: Acd-Jake
 
 ### Fork Maintainer  
-- **folken88** - Maintainer of this updated fork
+- **Tobias Merriman** (Folken Games) - Maintainer of this updated fork
   - GitHub: [folken88](https://github.com/folken88)
+  - Company: [Folken Games](https://github.com/folken88)
   - Repository: [acd-talking-actors-forked](https://github.com/folken88/acd-talking-actors-forked)
 
 ### Acknowledgments
